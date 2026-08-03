@@ -100,6 +100,7 @@ export function ProjectIndex() {
             >
               <div className="visual-card-media">
                 <Image
+                  unoptimized
                   src={project.heroImage}
                   alt={`Проект ${project.title}`}
                   width={1200}

@@ -68,6 +68,7 @@ export default async function ProjectPage({ params }: Props) {
         data-cursor="VIEW"
       >
         <Image
+          unoptimized
           src={project.heroImage}
           alt={`Главный экран демонстрационного проекта ${project.title}`}
           width={1400}
@@ -142,6 +143,7 @@ export default async function ProjectPage({ params }: Props) {
             {project.gallery.map((image, i) => (
               <div className="gallery-item" key={image} data-cursor="VIEW">
                 <Image
+                  unoptimized
                   src={image}
                   alt={`${project.title}: демонстрационный экран ${i + 1}`}
                   width={1000}

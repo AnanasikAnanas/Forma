@@ -11,8 +11,8 @@ interface Fetcher {
 }
 
 interface Env {
-  ASSETS: Fetcher;
-  IMAGES: {
+  ASSETS?: Fetcher;
+  IMAGES?: {
     input(stream: ReadableStream): {
       transform(options: Record<string, unknown>): {
         output(options: {
@@ -43,15 +43,15 @@ const worker = {
   ): Promise<Response> {
     const url = new URL(request.url);
 
-    if (url.pathname === "/_vinext/image") {
+    if (url.pathname === "/_vinext/image" && env.ASSETS && env.IMAGES) {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       return handleImageOptimization(
         request,
         {
           fetchAsset: (path) =>
-            env.ASSETS.fetch(new Request(new URL(path, request.url))),
+            env.ASSETS!.fetch(new Request(new URL(path, request.url))),
           transformImage: async (body, { width, format, quality }) => {
-            const result = await env.IMAGES.input(body)
+            const result = await env.IMAGES!.input(body)
               .transform(width > 0 ? { width } : {})
               .output({ format, quality });
             return result.response();

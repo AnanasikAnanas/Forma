@@ -39,6 +39,7 @@ export function ProjectPreview({
           </Reveal>
           <div className="project-visual" data-cursor="VIEW">
             <Image
+              unoptimized
               src={project.heroImage}
               alt={`Демонстрационный экран проекта ${project.title}`}
               width={1200}
