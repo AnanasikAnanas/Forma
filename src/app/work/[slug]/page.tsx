@@ -49,7 +49,7 @@ export default async function ProjectPage({ params }: Props) {
               ГОД<strong>{project.year}</strong>
             </div>
             <div>
-              ТИП<strong>Коммерческий сайт</strong>
+              ТИП<strong>{project.projectType ?? "Коммерческий сайт"}</strong>
             </div>
             <div>
               СРОК<strong>{project.duration}</strong>
@@ -84,10 +84,8 @@ export default async function ProjectPage({ params }: Props) {
             <div className="story-copy">
               <p>{project.description}</p>
               <p>
-                Задача — собрать понятный путь от первого впечатления до
-                целевого действия, не перегружая посетителя деталями. Все
-                названия, материалы и решения в кейсе демонстрационные; числовые
-                бизнес-результаты не заявляются.
+                {project.challenge ??
+                  "Задача — собрать понятный путь от первого впечатления до целевого действия, не перегружая посетителя деталями. Все названия, материалы и решения в кейсе демонстрационные; числовые бизнес-результаты не заявляются."}
               </p>
             </div>
           </div>
@@ -115,14 +113,16 @@ export default async function ProjectPage({ params }: Props) {
             <h2 className="section-heading">Логика до деталей.</h2>
           </div>
           <div className="structure-map">
-            {[
-              "Первый экран",
-              "Услуги",
-              "Преимущества",
-              "Специалисты",
-              "Отзывы",
-              "Запись",
-            ].map((item, i) => (
+            {(
+              project.structure ?? [
+                "Первый экран",
+                "Услуги",
+                "Преимущества",
+                "Специалисты",
+                "Отзывы",
+                "Запись",
+              ]
+            ).map((item, i) => (
               <div key={item}>
                 0{i + 1}
                 <br />
@@ -162,14 +162,16 @@ export default async function ProjectPage({ params }: Props) {
             <h2 className="section-heading">Собрано для реальной работы.</h2>
           </div>
           <div className="tech-list">
-            {[
-              "Next.js",
-              "TypeScript",
-              "Адаптивная вёрстка",
-              "SEO base",
-              "Интеграция записи",
-              "Аналитика",
-            ].map((item) => (
+            {(
+              project.tech ?? [
+                "Next.js",
+                "TypeScript",
+                "Адаптивная вёрстка",
+                "SEO base",
+                "Интеграция записи",
+                "Аналитика",
+              ]
+            ).map((item) => (
               <span key={item}>{item}</span>
             ))}
           </div>
@@ -180,11 +182,10 @@ export default async function ProjectPage({ params }: Props) {
           <div className="case-story">
             <h2>06 / РЕЗУЛЬТАТ</h2>
             <div className="story-copy">
-              <p>Готовая основа для запуска.</p>
+              <p>{project.result?.[0] ?? "Готовая основа для запуска."}</p>
               <p>
-                Создана понятная структура, усилен акцент на онлайн-записи,
-                подготовлена мобильная версия и разработана единая визуальная
-                система. Сайт готов к подключению реального контента.
+                {project.result?.[1] ??
+                  "Создана понятная структура, усилен акцент на онлайн-записи, подготовлена мобильная версия и разработана единая визуальная система. Сайт готов к подключению реального контента."}
               </p>
             </div>
           </div>

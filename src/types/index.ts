@@ -13,6 +13,11 @@ export type Project = {
   duration: string;
   role: string;
   concept: string;
+  projectType?: string;
+  challenge?: string;
+  structure?: string[];
+  tech?: string[];
+  result?: [string, string];
 };
 
 export type BusinessType = {

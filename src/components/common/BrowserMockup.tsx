@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     name: "LUNA NAILS",
-    note: "NAIL CULTURE / 2026",
-    color: "#C9919B",
-    title: "ТИХАЯ\nКРАСОТА",
+    note: "NAIL STUDIO / TOGLIATTI",
+    color: "#671F2D",
+    title: "СТИЛЬ\nВ ДЕТАЛЯХ",
   },
   {
     name: "ELEMENT LASER",
