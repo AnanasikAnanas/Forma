@@ -299,11 +299,12 @@ img {
 /* Hero and browser */
 .home-hero {
   min-height: 100svh;
-  padding-top: 120px;
+  padding-top: clamp(96px, 7vw, 120px);
   display: flex;
   align-items: stretch;
 }
 .hero-grid {
+  position: relative;
   flex: 1;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -338,19 +339,20 @@ img {
   position: relative;
   z-index: 1;
   grid-column: 1 / 10;
-  align-self: end;
+  align-self: start;
   margin: 0;
-  padding: 2vh 0 3vh;
-  font-size: clamp(3.5rem, 8.9vw, 10.4rem);
+  padding: clamp(46px, 7vh, 88px) 0 3vh;
+  font-size: clamp(3.8rem, 5.9vw, 7.4rem);
   font-weight: 530;
   letter-spacing: -0.072em;
-  line-height: 0.79;
+  line-height: 0.82;
 }
 .hero-title span {
   display: block;
+  white-space: nowrap;
 }
 .hero-title span:nth-child(2) {
-  margin-left: 7.8vw;
+  margin-left: 4.5vw;
 }
 .hero-title span:nth-child(3) {
   color: var(--accent);
@@ -360,8 +362,8 @@ img {
   z-index: 2;
   grid-column: 9 / 13;
   grid-row: 1 / 3;
-  align-self: end;
-  padding-left: 18px;
+  align-self: start;
+  padding: clamp(46px, 7vh, 88px) 0 0 18px;
 }
 .hero-subcopy {
   max-width: 320px;
@@ -1816,6 +1818,9 @@ img {
     font-size: clamp(3.15rem, 16.5vw, 5.5rem);
     line-height: 0.82;
     padding: 0;
+  }
+  .hero-title span {
+    white-space: normal;
   }
   .hero-title span:nth-child(2) {
     margin-left: 0;
