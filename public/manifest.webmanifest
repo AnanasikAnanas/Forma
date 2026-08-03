@@ -1,0 +1,10 @@
+{
+  "name": "FORMA — Digital atelier",
+  "short_name": "FORMA",
+  "description": "Сайты для локального бизнеса",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F1EFE9",
+  "theme_color": "#E85D3F",
+  "icons": [{ "src": "/favicon.png", "sizes": "64x64", "type": "image/png" }]
+}
