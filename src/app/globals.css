@@ -1815,11 +1815,13 @@ img {
     padding: 0 0 42px;
   }
   .hero-title {
-    font-size: clamp(3.15rem, 16.5vw, 5.5rem);
-    line-height: 0.82;
+    max-width: 100%;
+    font-size: clamp(2.55rem, 12.8vw, 4.75rem);
+    line-height: 0.84;
     padding: 0;
   }
   .hero-title span {
+    max-width: 100%;
     white-space: normal;
   }
   .hero-title span:nth-child(2) {
@@ -1860,7 +1862,7 @@ img {
     display: none;
   }
   .browser-art {
-    inset-left: 56%;
+    left: 56%;
   }
   .page-hero {
     min-height: 68svh;
@@ -1987,8 +1989,15 @@ img {
     margin-top: 10px;
   }
   .dark-statement h2 {
+    max-width: 100%;
     margin-bottom: 60px;
-    font-size: clamp(4rem, 17vw, 7rem);
+    font-size: clamp(2.5rem, 13vw, 7rem);
+  }
+  .dark-statement {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .dark-statement .container {
+    min-width: 0;
   }
   .statement-lines {
     grid-template-columns: 1fr;
@@ -2032,8 +2041,15 @@ img {
   }
   .contact-form {
     display: block;
+    min-width: 0;
+  }
+  .choice-field {
+    width: 100%;
+    min-width: 0;
   }
   .choice-list {
+    max-width: 100%;
+    min-width: 0;
     flex-wrap: nowrap;
     overflow-x: auto;
     padding-bottom: 8px;
