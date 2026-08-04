@@ -22,7 +22,7 @@ export default function PrivacyPage() {
           <div>
             <SectionLabel index="01" title="PRIVACY" />
           </div>
-          <h1 style={{ fontSize: "clamp(3.8rem,9vw,10rem)" }}>
+          <h1 style={{ fontSize: "clamp(3rem,15vw,10rem)" }}>
             ПОЛИТИКА
             <br />
             ДАННЫХ

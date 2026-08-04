@@ -328,6 +328,7 @@ img {
 }
 .hero-kicker {
   grid-column: 1 / 5;
+  grid-row: 1;
   display: flex;
   justify-content: space-between;
   align-self: start;
@@ -338,11 +339,12 @@ img {
 .hero-title {
   position: relative;
   z-index: 1;
-  grid-column: 1 / 10;
-  align-self: start;
+  grid-column: 1 / 9;
+  grid-row: 2;
+  align-self: center;
   margin: 0;
-  padding: clamp(46px, 7vh, 88px) 0 3vh;
-  font-size: clamp(3.8rem, 5.9vw, 7.4rem);
+  padding: clamp(34px, 5vh, 70px) 0 5vh;
+  font-size: clamp(3.8rem, 4.7vw, 6.5rem);
   font-weight: 530;
   letter-spacing: -0.072em;
   line-height: 0.82;
@@ -378,6 +380,7 @@ img {
 }
 .hero-meta {
   grid-column: 1 / 13;
+  grid-row: 3;
   display: grid;
   grid-template-columns: 4fr 4fr 3fr 1fr;
   align-items: end;
@@ -1696,6 +1699,7 @@ img {
   }
   .hero-grid {
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
   }
   .hero-grid::before {
     display: none;
@@ -1705,14 +1709,16 @@ img {
   }
   .hero-title {
     grid-column: 1 / 7;
+    grid-row: 2;
   }
   .hero-side {
     grid-column: 3 / 7;
-    grid-row: auto;
+    grid-row: 3;
     padding: 20px 0 40px;
   }
   .hero-meta {
     grid-column: 1 / 7;
+    grid-row: 4;
   }
   .browser {
     margin-left: auto;
@@ -1777,6 +1783,12 @@ img {
 }
 
 @media (max-width: 700px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
   :root {
     --page-pad: 16px;
   }
@@ -1816,7 +1828,7 @@ img {
   }
   .hero-title {
     max-width: 100%;
-    font-size: clamp(2.55rem, 12.8vw, 4.75rem);
+    font-size: clamp(2.45rem, 12.7vw, 4.75rem);
     line-height: 0.84;
     padding: 0;
   }
@@ -1870,10 +1882,12 @@ img {
   }
   .page-hero-grid {
     display: block;
+    min-width: 0;
   }
   .page-hero h1 {
     margin-top: 20vh;
-    font-size: clamp(4.2rem, 19vw, 7rem);
+    max-width: 100%;
+    font-size: clamp(3.05rem, 15.5vw, 5.6rem);
   }
   .page-hero p {
     margin-top: 34px;
@@ -2007,10 +2021,15 @@ img {
   }
   .service-row {
     grid-template-columns: 42px 1fr;
+    min-width: 0;
     padding-bottom: 32px;
   }
+  .service-row > * {
+    min-width: 0;
+  }
   .service-row h3 {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 8.6vw, 2.8rem);
+    overflow-wrap: anywhere;
   }
   .service-row p,
   .service-price {
@@ -2035,9 +2054,13 @@ img {
   .contact-head {
     display: block;
   }
+  .contact-head > * {
+    min-width: 0;
+  }
   .contact-head h2 {
     margin: 42px 0;
-    font-size: clamp(5rem, 24vw, 8rem);
+    max-width: 100%;
+    font-size: clamp(3.4rem, 16vw, 5.5rem);
   }
   .contact-form {
     display: block;
@@ -2116,7 +2139,8 @@ img {
   }
   .case-title {
     margin-top: 100px;
-    font-size: clamp(5rem, 23vw, 9rem);
+    max-width: 100%;
+    font-size: clamp(4rem, 21vw, 8rem);
   }
   .case-meta {
     grid-template-columns: 1fr 1fr;
