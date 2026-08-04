@@ -11,9 +11,9 @@ const slides = [
   },
   {
     name: "ELEMENT LASER",
-    note: "SKIN / TECHNOLOGY",
-    color: "#AAB7A0",
-    title: "ТОЧНОСТЬ\nИ ЗАБОТА",
+    note: "DIODE / PERSONAL CARE",
+    color: "#173D31",
+    title: "ГЛАДКАЯ КОЖА\nБЕЗ РУТИНЫ",
   },
   {
     name: "BORODA 63",

@@ -59,7 +59,7 @@ export const projects: Project[] = [
     year: 2026,
     description:
       "Чистая система, которая спокойно объясняет процедуры и ведёт к первому визиту.",
-    accentColor: "#AAB7A0",
+    accentColor: "#173D31",
     services: ["Процедуры", "Подготовка", "FAQ", "Запись"],
     heroImage: "/images/work/element-laser/hero.png",
     gallery: [
