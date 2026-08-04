@@ -7,7 +7,7 @@ const slides = [
     name: "LUNA NAILS",
     note: "NAIL STUDIO / TOGLIATTI",
     color: "#671F2D",
-    title: "СТИЛЬ\nВ ДЕТАЛЯХ",
+    title: "ВАШ СТИЛЬ\nВ ДЕТАЛЯХ",
   },
   {
     name: "ELEMENT LASER",
